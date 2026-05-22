@@ -84,4 +84,4 @@ Favor clear, small C# code that keeps calculator state easy to reason about. Sep
 **Document Version**: 1.0.0
 **Last Updated**: 2026-03-23
 **Maintainer**: Development Team
-**Related Instructions**: [.github/instructions/dotnet.instructions.md](.github/instructions/dotnet.instructions.md), [.github/instructions/evergreen-software-development.instructions.md](.github/instructions/evergreen-software-development.instructions.md)
+**Related Instructions**: [dotnet.instructions.md](dotnet.instructions.md), [evergreen-software-development.instructions.md](evergreen-software-development.instructions.md)

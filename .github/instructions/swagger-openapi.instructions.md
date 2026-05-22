@@ -31,17 +31,17 @@ This file defines Swagger and OpenAPI conventions for PostHubAPI. API documentat
 
 **Related Documentation**:
 
-- [ASP.NET Core Web API Instructions](.github/instructions/aspnet-core-web-api.instructions.md)
-- [JWT Bearer Authentication Instructions](.github/instructions/jwt-bearer-authentication.instructions.md)
-- [Documentation Instructions](.github/instructions/documentation.instructions.md)
+- [ASP.NET Core Web API Instructions](aspnet-core-web-api.instructions.md)
+- [JWT Bearer Authentication Instructions](jwt-bearer-authentication.instructions.md)
+- [Documentation Instructions](documentation.instructions.md)
 
 ## Table of Contents
 
-- [Startup Configuration](#startup-configuration)
-- [Endpoint Documentation](#endpoint-documentation)
-- [DTO Clarity](#dto-clarity)
-- [Authentication In Docs](#authentication-in-docs)
-- [Quality Checklist](#quality-checklist)
+- Startup Configuration
+- Endpoint Documentation
+- DTO Clarity
+- Authentication In Docs
+- Quality Checklist
 
 ## Startup Configuration
 

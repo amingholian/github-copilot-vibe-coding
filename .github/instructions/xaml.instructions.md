@@ -82,4 +82,4 @@ Use XAML to express a clean, stable calculator UI. Keep layout declarative, name
 **Document Version**: 1.0.0
 **Last Updated**: 2026-03-23
 **Maintainer**: Development Team
-**Related Instructions**: [.github/instructions/wpf.instructions.md](.github/instructions/wpf.instructions.md), [.github/instructions/evergreen-software-development.instructions.md](.github/instructions/evergreen-software-development.instructions.md)
+**Related Instructions**: [wpf.instructions.md](wpf.instructions.md), [evergreen-software-development.instructions.md](evergreen-software-development.instructions.md)

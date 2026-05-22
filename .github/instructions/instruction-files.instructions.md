@@ -28,23 +28,23 @@ This document provides comprehensive guidance for creating new instruction files
 
 **Related Documentation**:
 
-- [AI-Assisted Output Instructions](.github/instructions/ai-assisted-output.instructions.md)
-- [Copilot Instructions](.github/instructions/copilot-instructions.md)
-- [Instruction Prompt Requirements](.github/instructions/instruction-prompt-files.instructions.md)
+- [AI-Assisted Output Instructions](ai-assisted-output.instructions.md)
+- `copilot-instructions.md` if present in the repository
+- [Instruction Prompt Requirements](instruction-prompt-files.instructions.md)
 
 ## Table of Contents
 
-- [When to Create Instruction Files](#when-to-create-instruction-files)
-- [File Structure Requirements](#file-structure-requirements)
-- [Content Guidelines](#content-guidelines)
-- [Creation Process](#creation-process)
-- [Quality Standards](#quality-standards)
-- [Common Patterns](#common-patterns)
-- [AI-Specific Considerations](#ai-specific-considerations)
-- [Integration Requirements](#integration-requirements)
-- [Validation Checklist](#validation-checklist)
-- [Common Mistakes](#common-mistakes)
-- [Examples](#examples)
+- When to Create Instruction Files
+- File Structure Requirements
+- Content Guidelines
+- Creation Process
+- Quality Standards
+- Common Patterns
+- AI-Specific Considerations
+- Integration Requirements
+- Validation Checklist
+- Common Mistakes
+- Examples
 
 ## When to Create Instruction Files
 
@@ -396,7 +396,7 @@ For frequently-used AI instructions, create optimized versions:
 
 ### 1. README Updates
 
-**See**: [Post-Creation Requirements (CANONICAL)](ai-assisted-output.instructions.md#post-creation-requirements-canonical) for complete requirements.
+**See**: the Post-Creation Requirements (CANONICAL) section in `ai-assisted-output.instructions.md` for complete requirements.
 
 Add new instruction files to appropriate README section:
 
@@ -420,7 +420,7 @@ Consider creating a corresponding prompt file:
 
 Before finalizing any instruction file:
 
-**Complete Post-Creation Requirements**: See [Post-Creation Requirements (CANONICAL)](ai-assisted-output.instructions.md#post-creation-requirements-canonical)
+**Complete Post-Creation Requirements**: See the Post-Creation Requirements (CANONICAL) section in `ai-assisted-output.instructions.md`
 
 ### Content Validation
 
@@ -473,7 +473,7 @@ Before finalizing any instruction file:
 ### Process Mistakes
 
 ❌ **No Documentation**: File created without updating README
-✅ **Complete Documentation**: See [Post-Creation Requirements (CANONICAL)](ai-assisted-output.instructions.md#post-creation-requirements-canonical)
+✅ **Complete Documentation**: See the Post-Creation Requirements (CANONICAL) section in `ai-assisted-output.instructions.md`
 
 ❌ **Reused Chat Logs**: Appending to existing conversation files
 ✅ **Unique Chat Logs**: New conversation file for each session

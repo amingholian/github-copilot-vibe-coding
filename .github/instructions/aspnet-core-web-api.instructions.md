@@ -31,19 +31,19 @@ This file defines the ASP.NET Core Web API conventions for PostHubAPI. Follow th
 
 **Related Documentation**:
 
-- [C# Instructions](.github/instructions/csharp.instructions.md)
-- [Entity Framework Core Instructions](.github/instructions/entity-framework-core.instructions.md)
-- [JWT Bearer Authentication Instructions](.github/instructions/jwt-bearer-authentication.instructions.md)
-- [Swagger OpenAPI Instructions](.github/instructions/swagger-openapi.instructions.md)
+- [C# Instructions](csharp.instructions.md)
+- [Entity Framework Core Instructions](entity-framework-core.instructions.md)
+- [JWT Bearer Authentication Instructions](jwt-bearer-authentication.instructions.md)
+- [Swagger OpenAPI Instructions](swagger-openapi.instructions.md)
 
 ## Table of Contents
 
-- [Service Registration](#service-registration)
-- [Controller Design](#controller-design)
-- [Validation And Errors](#validation-and-errors)
-- [Authorization](#authorization)
-- [Environment-Aware Configuration](#environment-aware-configuration)
-- [Quality Checklist](#quality-checklist)
+- Service Registration
+- Controller Design
+- Validation And Errors
+- Authorization
+- Environment-Aware Configuration
+- Quality Checklist
 
 ## Service Registration
 

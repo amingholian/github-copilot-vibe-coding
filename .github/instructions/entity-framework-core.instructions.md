@@ -31,18 +31,18 @@ This file defines Entity Framework Core usage for PostHubAPI. The project uses E
 
 **Related Documentation**:
 
-- [ASP.NET Core Web API Instructions](.github/instructions/aspnet-core-web-api.instructions.md)
-- [C# Instructions](.github/instructions/csharp.instructions.md)
-- [Test-Driven Development Instructions](.github/instructions/test-driven-development.instructions.md)
+- [ASP.NET Core Web API Instructions](aspnet-core-web-api.instructions.md)
+- [C# Instructions](csharp.instructions.md)
+- [Test-Driven Development Instructions](test-driven-development.instructions.md)
 
 ## Table of Contents
 
-- [Provider Selection](#provider-selection)
-- [Async Data Access](#async-data-access)
-- [Relationship Loading](#relationship-loading)
-- [Mutations](#mutations)
-- [Configuration And Secrets](#configuration-and-secrets)
-- [Quality Checklist](#quality-checklist)
+- Provider Selection
+- Async Data Access
+- Relationship Loading
+- Mutations
+- Configuration And Secrets
+- Quality Checklist
 
 ## Provider Selection
 

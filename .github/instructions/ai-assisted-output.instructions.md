@@ -26,35 +26,35 @@ applyTo: "**/*"
 
 This repository requires clear provenance and reliable logging for all AI-assisted outputs. Provenance and logging protect code quality, enable audits, and help teammates understand how artifacts were produced (by whom, with what model, and from which conversation). This policy defines the required metadata, logging workflow, quality gates, and Copilot integration behaviors to make provenance automatic, consistent, and verifiable.
 
-**For GitHub Copilot Users**: See [`.github/instructions/copilot-instructions.md`](.github/instructions/copilot-instructions.md) for comprehensive Copilot-specific guidance including model identification, conversation format, and quality checklists.
+**For GitHub Copilot Users**: See `copilot-instructions.md` if present in the repository for Copilot-specific guidance including model identification, conversation format, and quality checklists.
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Audience](#audience)
-- [Scope](#scope)
-- [Terminology](#terminology)
-- [Metadata placement policy](#metadata-placement-policy)
-- [Required provenance metadata (for every AI-assisted artifact)](#required-provenance-metadata-for-every-ai-assisted-artifact)
-- [Before You Start (Mandatory)](#before-you-start-mandatory)
-- [Standard Metadata Front Matter](#standard-metadata-front-matter)
-- [AI chat logging workflow](#ai-chat-logging-workflow)
-  - [Copilot-Integrated Chat Management](#copilot-integrated-chat-management)
-  - [conversation.md Template](#conversationmd-template)
-  - [summary.md Template](#summarymd-template)
-- [Capturing task durations](#capturing-task-durations)
-- [Placement and naming](#placement-and-naming)
-- [Example Implementation](#example-implementation)
-- [Quality Checklist](#quality-checklist)
-- [PR and Commit Checklist (Mandatory)](#pr-and-commit-checklist-mandatory)
-- [GitHub Copilot Implementation Requirements](#github-copilot-implementation-requirements)
-  - [Chat Lifecycle Management](#chat-lifecycle-management)
-  - [File Generation Workflow](#file-generation-workflow)
-  - [Error Handling](#error-handling)
-  - [Integration Points](#integration-points)
-  - [Chat ID Clarification](#chat-id-clarification)
-- [Enforcement (CI)](#enforcement-ci)
-- [Non-Compliance and Remediation](#non-compliance-and-remediation)
+- Overview
+- Audience
+- Scope
+- Terminology
+- Metadata placement policy
+- Required provenance metadata (for every AI-assisted artifact)
+- Before You Start (Mandatory)
+- Standard Metadata Front Matter
+- AI chat logging workflow
+  - Copilot-Integrated Chat Management
+  - conversation.md Template
+  - summary.md Template
+- Capturing task durations
+- Placement and naming
+- Example Implementation
+- Quality Checklist
+- PR and Commit Checklist (Mandatory)
+- GitHub Copilot Implementation Requirements
+  - Chat Lifecycle Management
+  - File Generation Workflow
+  - Error Handling
+  - Integration Points
+  - Chat ID Clarification
+- Enforcement (CI)
+- Non-Compliance and Remediation
 
 ## Audience
 
@@ -103,7 +103,7 @@ All AI-assisted artifacts must complete these steps after creation:
 4. **Metadata Verification**: Ensure all required provenance fields are present and correct
 5. **Link Validation**: Verify all internal links work correctly
 
-Authors must attach or embed the following metadata near the top of the artifact, following the [Metadata placement policy](#metadata-placement-policy):
+Authors must attach or embed the following metadata near the top of the artifact, following the Metadata placement policy section in this document:
 
 Conceptual fields (map to YAML when embedding):
 
@@ -122,7 +122,7 @@ Conceptual fields (map to YAML when embedding):
 Notes:
 
 - In YAML front matter, use `ai_generated: true` (boolean) instead of the string “Yes”.
-- If the artifact cannot embed front matter, create a sidecar `<artifact>.meta.md` with the same fields (see [Metadata placement policy](#metadata-placement-policy)).
+- If the artifact cannot embed front matter, create a sidecar `<artifact>.meta.md` with the same fields. See the Metadata placement policy section in this document.
 
 ## Before You Start (Mandatory)
 
@@ -179,7 +179,7 @@ source: "<source-identifier>" # Who/what created this file: username, prompt pat
 - The interface (GitHub Copilot, Cursor, etc.) should be noted in comments if relevant
 - If the exact model version is unknown, use best available information (e.g., `"openai/gpt-4o@unknown"`)
 
-For other file formats, adapt the structure using appropriate comment syntax; for non-embeddable formats, see [Metadata placement policy](#metadata-placement-policy).
+For other file formats, adapt the structure using appropriate comment syntax; for non-embeddable formats, see the Metadata placement policy section in this document.
 
 ## AI chat logging workflow
 
@@ -475,7 +475,7 @@ Before committing AI-assisted content, verify:
 - [ ] chat reference included in artifact metadata (`chat_id` and `ai_log`)
 - [ ] No sensitive data exposed in prompts or outputs
 - [ ] Naming conventions followed for files and paths
-- [ ] Complete [Post-Creation Requirements (CANONICAL)](#post-creation-requirements-canonical)
+- [ ] Complete Post-Creation Requirements (CANONICAL)
 - [ ] Chat scaffolding in place before artifact creation
 - [ ] Embedded metadata used for Markdown (no sidecar files; see “Metadata placement policy”)- [ ] **Artifact optimized for AI agent consumption and processing**
 - [ ] Output does not contain `U+2011` or `U+2019`; use `-` and `'` instead
@@ -809,4 +809,4 @@ Note: This example uses bash and is compatible with Linux/macOS runners. For Win
 - Missing logs or references: Scaffold `ai-logs/yyyy/mm/dd/<chat-id>/`, add front matter `ai_log` and `chat_id`, update README (optionally link back to the chat folder), then re-request review.
 - Orphaned artifacts: Create or reconstruct `conversation.md` from available history and update artifacts to reference it.
 - Incomplete metadata: Add missing required fields, timestamps, and task durations; verify operator and model details.
-- Sidecar misuse: If a sidecar is used where embedded front matter is supported (e.g., Markdown), move the metadata into embedded YAML and remove the sidecar (see [Metadata placement policy](#metadata-placement-policy)).
+- Sidecar misuse: If a sidecar is used where embedded front matter is supported (e.g., Markdown), move the metadata into embedded YAML and remove the sidecar. See the Metadata placement policy section in this document.

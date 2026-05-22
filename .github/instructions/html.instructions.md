@@ -27,18 +27,18 @@ This document defines HTML authoring rules for this repository. Use these instru
 
 **Related Documentation**:
 
-- [AI-Assisted Output Instructions](.github/instructions/ai-assisted-output.instructions.md)
-- [Evergreen Software Development](.github/instructions/evergreen-software-development.instructions.md)
+- [AI-Assisted Output Instructions](ai-assisted-output.instructions.md)
+- [Evergreen Software Development](evergreen-software-development.instructions.md)
 
 ## Table of Contents
 
-- [Semantic Structure](#semantic-structure)
-- [JavaScript Hooks](#javascript-hooks)
-- [Accessibility Requirements](#accessibility-requirements)
-- [Interactive Markup Patterns](#interactive-markup-patterns)
-- [State and Content Rules](#state-and-content-rules)
-- [Common Anti-Patterns](#common-anti-patterns)
-- [Quality Checklist](#quality-checklist)
+- Semantic Structure
+- JavaScript Hooks
+- Accessibility Requirements
+- Interactive Markup Patterns
+- State and Content Rules
+- Common Anti-Patterns
+- Quality Checklist
 
 ## Semantic Structure
 

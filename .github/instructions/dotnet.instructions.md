@@ -82,4 +82,4 @@ Optimize for a small, stable .NET 8 desktop application. Keep the project file l
 **Document Version**: 1.0.0
 **Last Updated**: 2026-03-23
 **Maintainer**: Development Team
-**Related Instructions**: [.github/instructions/evergreen-software-development.instructions.md](.github/instructions/evergreen-software-development.instructions.md), [.github/instructions/ai-assisted-output.instructions.md](.github/instructions/ai-assisted-output.instructions.md)
+**Related Instructions**: [evergreen-software-development.instructions.md](evergreen-software-development.instructions.md), [ai-assisted-output.instructions.md](ai-assisted-output.instructions.md)

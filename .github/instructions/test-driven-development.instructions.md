@@ -31,9 +31,9 @@ This document defines test-driven development (TDD) expectations for this reposi
 
 **Related Documentation**:
 
-- [AI-Assisted Output Instructions](.github/instructions/ai-assisted-output.instructions.md)
-- [Evergreen Software Development](.github/instructions/evergreen-software-development.instructions.md)
-- [Documentation Authoring Instructions](.github/instructions/documentation.instructions.md)
+- [AI-Assisted Output Instructions](ai-assisted-output.instructions.md)
+- [Evergreen Software Development](evergreen-software-development.instructions.md)
+- [Documentation Authoring Instructions](documentation.instructions.md)
 
 ## Core Rules
 

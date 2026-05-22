@@ -31,17 +31,17 @@ This file defines xUnit testing conventions for PostHubAPI. The test project mix
 
 **Related Documentation**:
 
-- [ASP.NET Core Web API Instructions](.github/instructions/aspnet-core-web-api.instructions.md)
-- [JWT Bearer Authentication Instructions](.github/instructions/jwt-bearer-authentication.instructions.md)
-- [Test-Driven Development Instructions](.github/instructions/test-driven-development.instructions.md)
+- [ASP.NET Core Web API Instructions](aspnet-core-web-api.instructions.md)
+- [JWT Bearer Authentication Instructions](jwt-bearer-authentication.instructions.md)
+- [Test-Driven Development Instructions](test-driven-development.instructions.md)
 
 ## Table of Contents
 
-- [Test Structure](#test-structure)
-- [Integration Test Setup](#integration-test-setup)
-- [Authentication Tests](#authentication-tests)
-- [Assertions And Data](#assertions-and-data)
-- [Quality Checklist](#quality-checklist)
+- Test Structure
+- Integration Test Setup
+- Authentication Tests
+- Assertions And Data
+- Quality Checklist
 
 ## Test Structure
 
@@ -53,7 +53,7 @@ This file defines xUnit testing conventions for PostHubAPI. The test project mix
 
 - Use `WebApplicationFactory` to exercise startup, routing, auth, and serialization behavior together.
 - Override configuration in tests without relying on committed secrets.
-- Keep in-memory database state isolated per test or per controlled factory instance.
+- Create a separate in-memory database instance for each test.
 
 ## Authentication Tests
 

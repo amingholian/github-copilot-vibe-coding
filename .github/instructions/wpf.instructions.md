@@ -76,4 +76,4 @@ Use WPF as a lightweight desktop UI layer. Keep code-behind synchronized with XA
 **Document Version**: 1.0.0
 **Last Updated**: 2026-03-23
 **Maintainer**: Development Team
-**Related Instructions**: [.github/instructions/csharp.instructions.md](.github/instructions/csharp.instructions.md), [.github/instructions/xaml.instructions.md](.github/instructions/xaml.instructions.md)
+**Related Instructions**: [csharp.instructions.md](csharp.instructions.md), [xaml.instructions.md](xaml.instructions.md)

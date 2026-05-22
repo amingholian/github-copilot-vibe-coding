@@ -30,8 +30,8 @@ These instructions apply to all CSS3 code, whether embedded in HTML files or wri
 
 ## Related Documentation
 
-- [Evergreen Software Development Instructions](.github/instructions/evergreen-software-development.instructions.md)
-- [HTML Development Instructions](.github/instructions/html.instructions.md)
+- [Evergreen Software Development Instructions](evergreen-software-development.instructions.md)
+- [HTML Development Instructions](html.instructions.md)
 
 ## Rules for CSS Development
 

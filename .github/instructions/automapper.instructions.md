@@ -31,17 +31,17 @@ This file defines AutoMapper usage for PostHubAPI. Mapping should remain central
 
 **Related Documentation**:
 
-- [ASP.NET Core Web API Instructions](.github/instructions/aspnet-core-web-api.instructions.md)
-- [Entity Framework Core Instructions](.github/instructions/entity-framework-core.instructions.md)
-- [C# Instructions](.github/instructions/csharp.instructions.md)
+- [ASP.NET Core Web API Instructions](aspnet-core-web-api.instructions.md)
+- [Entity Framework Core Instructions](entity-framework-core.instructions.md)
+- [C# Instructions](csharp.instructions.md)
 
 ## Table of Contents
 
-- [DTO Intent](#dto-intent)
-- [Where Mapping Happens](#where-mapping-happens)
-- [Profile Design](#profile-design)
-- [Update Mapping](#update-mapping)
-- [Quality Checklist](#quality-checklist)
+- DTO Intent
+- Where Mapping Happens
+- Profile Design
+- Update Mapping
+- Quality Checklist
 
 ## DTO Intent
 

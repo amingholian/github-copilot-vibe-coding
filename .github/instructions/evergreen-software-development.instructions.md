@@ -31,19 +31,19 @@ This document defines evergreen software development practices for this reposito
 
 **Related Documentation**:
 
-- [AI-Assisted Output Instructions](.github/instructions/ai-assisted-output.instructions.md)
-- [Creating New Instruction Files](.github/instructions/instruction-files.instructions.md)
+- [AI-Assisted Output Instructions](ai-assisted-output.instructions.md)
+- [Creating New Instruction Files](instruction-files.instructions.md)
 
 ## Table of Contents
 
-- [Core Principles](#core-principles)
-- [Design Rules](#design-rules)
-- [Implementation Guidance](#implementation-guidance)
-- [Dependency Rules](#dependency-rules)
-- [Testing And Validation](#testing-and-validation)
-- [Documentation Expectations](#documentation-expectations)
-- [Common Failure Patterns](#common-failure-patterns)
-- [Quality Checklist](#quality-checklist)
+- Core Principles
+- Design Rules
+- Implementation Guidance
+- Dependency Rules
+- Testing And Validation
+- Documentation Expectations
+- Common Failure Patterns
+- Quality Checklist
 
 ## Core Principles
 

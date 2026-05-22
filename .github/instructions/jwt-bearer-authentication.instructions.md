@@ -31,17 +31,17 @@ This file defines JWT bearer authentication rules for PostHubAPI. The repository
 
 **Related Documentation**:
 
-- [ASP.NET Core Web API Instructions](.github/instructions/aspnet-core-web-api.instructions.md)
-- [Swagger OpenAPI Instructions](.github/instructions/swagger-openapi.instructions.md)
-- [README.md](README.md)
+- [ASP.NET Core Web API Instructions](aspnet-core-web-api.instructions.md)
+- [Swagger OpenAPI Instructions](swagger-openapi.instructions.md)
+- [README.md](../../README.md)
 
 ## Table of Contents
 
-- [Configuration Keys](#configuration-keys)
-- [Secret Handling](#secret-handling)
-- [Middleware Configuration](#middleware-configuration)
-- [Authorization Usage](#authorization-usage)
-- [Quality Checklist](#quality-checklist)
+- Configuration Keys
+- Secret Handling
+- Middleware Configuration
+- Authorization Usage
+- Quality Checklist
 
 ## Configuration Keys
 
