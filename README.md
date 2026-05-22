@@ -56,6 +56,15 @@ The **PostHubAPI** is a blog API that provides complete CRUD (Create, Read, Upda
 | **LibMan** | Client-side library manager |
 | **User Secrets** | Local development secret storage (JWT key) |
 
+## Project Instruction Files
+
+- [.github/instructions/aspnet-core-web-api.instructions.md](.github/instructions/aspnet-core-web-api.instructions.md): API startup, controller, validation, and response conventions for this repository.
+- [.github/instructions/entity-framework-core.instructions.md](.github/instructions/entity-framework-core.instructions.md): EF Core provider, query, mutation, and persistence guidance for the project data layer.
+- [.github/instructions/automapper.instructions.md](.github/instructions/automapper.instructions.md): DTO mapping rules for profiles, service-layer mapping, and update flows.
+- [.github/instructions/xunit-api-testing.instructions.md](.github/instructions/xunit-api-testing.instructions.md): Test conventions for integration-style API tests and controller behavior checks.
+- [.github/instructions/jwt-bearer-authentication.instructions.md](.github/instructions/jwt-bearer-authentication.instructions.md): JWT configuration, secret handling, and authorization guidance.
+- [.github/instructions/swagger-openapi.instructions.md](.github/instructions/swagger-openapi.instructions.md): Swagger/OpenAPI contract and documentation guidance for API endpoints.
+
 ## Features
 
 - **CRUD for Posts**: Create, read, update, and delete blog posts.
