@@ -16,7 +16,7 @@ task_durations:
     duration: "00:05:00"
 total_duration: "00:30:00"
 ai_log: "ai-logs/2026/01/20/generate-ai-output-policy-20260120/conversation.md"
-source: ".github/prompts/create-ai-assisted-output-instructions.prompt.md"
+source: ".github/copilot/Promptfiles/create-ai-assisted-output-instructions.prompt.md"
 applyTo: "**/*"
 ---
 
@@ -77,6 +77,8 @@ Contributors generating or curating AI-assisted content (code, docs, diagrams, t
 - Use `chat_id` in embedded metadata/front matter.
 - Do not use “session” or “session-id” in paths or labels.
 - Standardize placeholder paths on `<chat-id>`.
+- Do not output `U+2011`; use `-` instead.
+- Do not output `U+2019`; use `'` instead.
 
 ## Metadata placement policy
 
@@ -190,7 +192,7 @@ All AI chat transcripts and key outputs must be saved under `ai-logs/` in a date
 - Base folder: `ai-logs/`
 - Structure: `ai-logs/yyyy/mm/dd/<chat-id>/`
 - Required files per chat:
-  - `conversation.md` — Full prompt/response transcript with timestamps (REQUIRED)
+  - `conversation.md` — Full prompt/response transcript with timestamps and explicit reasoning for both why each change was made and why the chosen implementation approach was used (REQUIRED)
   - `summary.md` — Session summary: objectives, key decisions, artifacts, outcomes (REQUIRED)
   - `artifacts/` — Generated files not committed elsewhere (OPTIONAL)
 
@@ -211,7 +213,7 @@ artifact_protection: true # Prevent creation without chat context
 
 Implementation Requirements for Copilot:
 
-- Chat ID: Use Copilot’s chat ID directly as the identifier.
+- Chat ID: Use Copilot's chat ID directly as the identifier.
 - Automatic Scaffolding: Create `ai-logs/yyyy/mm/dd/<chat-id>/` when the first artifact is generated.
 - Conversation Logging: Export chat transcript to `conversation.md` automatically.
 - Artifact Metadata: Auto-populate chat ID reference in all generated files.
@@ -256,6 +258,11 @@ Implementation Requirements for Copilot:
 <!-- Repeat for each exchange -->
 
 ## Work Burst Closure
+
+**Reasoning (Required)**:
+
+- **Change Rationale**: Why this change was necessary (business, bug, compliance, usability, or technical driver)
+- **Implementation Rationale**: Why this implementation approach was selected over alternatives
 
 **Artifacts Produced**:
 
@@ -390,7 +397,7 @@ Include enough detail that someone unfamiliar with the chat can understand the "
 
 - Record the start and end timestamps for each significant task (e.g., drafting, refactor, diagram generation, test updates).
 - Compute each task duration and the overall total.
-- If multiple tools are used, list each tool’s portion or note parallel execution.
+- If multiple tools are used, list each tool's portion or note parallel execution.
 
 ## Placement and naming
 
@@ -471,7 +478,10 @@ Before committing AI-assisted content, verify:
 - [ ] Complete [Post-Creation Requirements (CANONICAL)](#post-creation-requirements-canonical)
 - [ ] Chat scaffolding in place before artifact creation
 - [ ] Embedded metadata used for Markdown (no sidecar files; see “Metadata placement policy”)- [ ] **Artifact optimized for AI agent consumption and processing**
+- [ ] Output does not contain `U+2011` or `U+2019`; use `-` and `'` instead
+- [ ] **Artifact optimized for AI agent consumption and processing**
 - [ ] **Content structured to minimize token usage while maintaining clarity and completeness**
+
 ## PR and Commit Checklist (Mandatory)
 
 Before submitting pull requests containing AI-assisted content:
@@ -511,7 +521,7 @@ type ChatMessage = {
 
 Automatic Behaviors:
 
-1. Chat Identity: Use Copilot’s chat ID as the identifier (no separate ID needed).
+1. Chat Identity: Use Copilot's chat ID as the identifier (no separate ID needed).
 2. Context Persistence: Maintain chat context throughout conversation lifecycle.
 3. Lazy Scaffolding: Create `ai-logs/yyyy/mm/dd/<chat-id>/` structure only when the first artifact is generated.
 4. Conversation Export: Auto-save chat transcript to `conversation.md` on artifact creation.
@@ -590,7 +600,7 @@ API Requirements:
 
 Single Identifier Approach: In the Copilot-integrated workflow, we use only one identifier.
 
-- Chat ID = Copilot chat ID: Copilot’s native chat identifier serves as the chat ID.
+- Chat ID = Copilot chat ID: Copilot's native chat identifier serves as the chat ID.
 - No Dual IDs: Do not create separate `chat_session_id` or similar.
 - Simplified Metadata: All artifacts reference the same chat ID consistently (`chat_id` field).
 - Unified Logging: The `ai-logs/yyyy/mm/dd/<chat-id>/` structure uses the chat ID directly.
@@ -713,7 +723,7 @@ jobs:
         uses: CycloneDX/gh-action@v2
         with:
           version: v1
-          args: 'generate -o sbom.xml -t application'
+          args: "generate -o sbom.xml -t application"
 
       # Verify SBOM integrity
       - name: Validate SBOM
@@ -792,8 +802,10 @@ jobs:
    - Document security scan exemptions in PR description
    - Audit security check logs regularly for patterns
 
-Note: This example uses bash and is compatible with Linux/macOS runners. For Windows runners, adapt the script to PowerShell or use WSL. For non-GitHub CI systems, apply equivalent logic in your platform’s scripting language. README updates are typically verified during PR review rather than automated CI checks (teams may extend CI to detect new AI-generated files and verify corresponding README entries if desired).
+Note: This example uses bash and is compatible with Linux/macOS runners. For Windows runners, adapt the script to PowerShell or use WSL. For non-GitHub CI systems, apply equivalent logic in your platform's scripting language. README updates are typically verified during PR review rather than automated CI checks (teams may extend CI to detect new AI-generated files and verify corresponding README entries if desired).
+
 ## Non-Compliance and Remediation
+
 - Missing logs or references: Scaffold `ai-logs/yyyy/mm/dd/<chat-id>/`, add front matter `ai_log` and `chat_id`, update README (optionally link back to the chat folder), then re-request review.
 - Orphaned artifacts: Create or reconstruct `conversation.md` from available history and update artifacts to reference it.
 - Incomplete metadata: Add missing required fields, timestamps, and task durations; verify operator and model details.

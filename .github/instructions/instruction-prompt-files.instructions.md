@@ -4,11 +4,7 @@ model: "anthropic/claude-3.5-sonnet@2024-10-22"
 operator: "johnmillerATcodemag-com"
 chat_id: "optimize-instructions-20251023"
 prompt: |
-<<<<<<<< HEAD:.github/instructions/instruction-prompt-files.instructions.md
   Create AI-optimized version of instruction-prompt-files.instructions.md with minimal tokens
-========
-  Create AI-optimized version of create-instruction-prompts.instructions.md with minimal tokens
->>>>>>>> e206ad3781af81d922968edf8fb8c0f073d70e2b:.github/instructions/create-instruction-prompts.instructions.md
 started: "2025-10-23T04:38:00Z"
 ended: "2025-10-23T04:38:00Z"
 task_durations:
@@ -69,9 +65,11 @@ Generate `.github/instructions/<domain>.instructions.md` with:
 
 ### Required AI Provenance Metadata (YAML Front Matter)
 
+Follow the canonical requirements in `.github/instructions/ai-assisted-output.instructions.md`.
+
 ````yaml
 ai_generated: true
-model: "<model-name-and-version>"
+model: "<provider>/<model-name>@<version>"
 operator: "<operator-username>"
 chat_id: "<chat-identifier>"
 prompt: |
@@ -83,6 +81,7 @@ task_durations:
     duration: "<hh:mm:ss>"
 total_duration: "<hh:mm:ss>"
 ai_log: "ai-logs/<yyyy>/<mm>/<dd>/<chat-id>/conversation.md"
+source: "<source-identifier>"
 applyTo: "<pattern>" # Optional
 ---
 \```
@@ -109,7 +108,7 @@ prompt_metadata:
 ```markdown
 ---
 mode: agent
-model: Auto (copilot)
+model: "anthropic/claude-3.5-sonnet@2024-10-22"
 tools: ["create"]
 description: Generates <domain> authoring guidelines
 prompt_metadata:
@@ -139,7 +138,7 @@ prompt_metadata:
 ## Validation Checklist
 
 - [ ] Context references AI policy
-- [ ] Deliverable includes provenance template with all 10 fields
+- [ ] Deliverable references the canonical provenance requirements and includes the required fields
 - [ ] Output path points to `.github/instructions/<name>.instructions.md`
 - [ ] Category is 'documentation'
 - [ ] Output format is 'markdown'
@@ -149,6 +148,7 @@ prompt_metadata:
 
 ❌ Missing AI provenance section → Add complete YAML template
 ❌ Not referencing AI policy → Add CRITICAL statement
+❌ Using `Auto (copilot)` as the model → Use explicit `provider/model@version` format
 ❌ Vague deliverable → Be explicit about metadata fields
 ❌ Forgetting applyTo field → Include when applicable
 
@@ -157,7 +157,7 @@ prompt_metadata:
 **Option 1**: Use meta-prompt
 
 ```
-Submit .github/prompts/meta/create-instruction-files-prompt-file.prompt.md
+Submit .github/copilot/Promptfiles/meta/create-instruction-files-prompt-file.prompt.md
 ```
 
 **Option 2**: Manual
