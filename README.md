@@ -4,10 +4,57 @@ The **PostHubAPI** is a blog API that provides complete CRUD (Create, Read, Upda
 
 ## Technologies Used
 
-- **C#**: Programming language used for API logic development.
-- **ASP.NET Web API**: Framework used to create RESTful APIs on the .NET platform.
-- **Entity Framework In Memory**: Object-Relational Mapping (ORM) tool that simplifies database access and manipulation.
-- **AutoMapper**: Library simplifying object mapping in .NET applications.
+### Language & Runtime
+
+| Technology | Version |
+|---|---|
+| **C#** | 12 (via .NET 8) |
+| **.NET SDK** | 8.0 |
+
+### API / Web
+
+| Package | Version | Purpose |
+|---|---|---|
+| **ASP.NET Core** | 8.0 | Web API framework |
+| **ASP.NET Core Identity** | 8.0.1 | User and role management |
+| `Microsoft.AspNetCore.Authentication.JwtBearer` | 8.0.0 | JWT authentication middleware |
+
+### Data Access
+
+| Package | Version | Purpose |
+|---|---|---|
+| **Entity Framework Core** | 8.0.1 | ORM / data access |
+| `Microsoft.EntityFrameworkCore.Sqlite` | 8.0.1 | Production database provider |
+| `Microsoft.EntityFrameworkCore.InMemory` | 8.0.1 | Development / test database provider |
+
+### Application
+
+| Package | Version | Purpose |
+|---|---|---|
+| **AutoMapper** (`AutoMapper.Extensions.Microsoft.DependencyInjection`) | 12.0.1 | DTO to model mapping |
+| **BCrypt.Net** | 0.1.0 | Password hashing |
+
+### API Documentation
+
+| Package | Version | Purpose |
+|---|---|---|
+| **Swashbuckle.AspNetCore** (Swagger / OpenAPI) | 6.5.0 | API docs and interactive UI |
+
+### Testing
+
+| Package | Version | Purpose |
+|---|---|---|
+| **xUnit** | 2.9.3 | Test framework |
+| `xunit.runner.visualstudio` | 3.1.4 | VS Test Explorer integration |
+| `Microsoft.NET.Test.Sdk` | 17.14.1 | .NET test runner |
+| `Microsoft.AspNetCore.Mvc.Testing` | 8.0.1 | Integration test web app factory |
+
+### Tooling
+
+| Tool | Purpose |
+|---|---|
+| **LibMan** | Client-side library manager |
+| **User Secrets** | Local development secret storage (JWT key) |
 
 ## Features
 
