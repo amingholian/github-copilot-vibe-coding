@@ -53,7 +53,7 @@ This file defines xUnit testing conventions for PostHubAPI. The test project mix
 
 - Use `WebApplicationFactory` to exercise startup, routing, auth, and serialization behavior together.
 - Override configuration in tests without relying on committed secrets.
-- Create a separate in-memory database instance for each test.
+- Isolate in-memory database state per test by default. Share a factory instance only when multiple tests explicitly need the same seeded state, and document that sharing in a comment.
 
 ## Authentication Tests
 
