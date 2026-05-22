@@ -1,6 +1,6 @@
 ---
 ai_generated: true
-model: "GitHub Copilot"
+model: "openai/gpt-5.4@unknown"
 operator: "johnmillerATcodemag-com"
 chat_id: "acaf6075-7dde-4cc7-b293-0829934f7cc3"
 prompt: |
@@ -15,6 +15,7 @@ task_durations:
 total_duration: "00:15:00"
 ai_log: "ai-logs/2026/05/18/acaf6075-7dde-4cc7-b293-0829934f7cc3/conversation.md"
 source: "calculator.html"
+applyTo: "**/*.css"
 ---
 
 # CSS3 Development Instructions

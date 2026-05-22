@@ -34,6 +34,8 @@ nextReview: "2026-06-23"
 
 Apply these rules when editing C# source files in this repository.
 
+> **Precedence note**: This file applies to all `*.cs` files. For `*.xaml.cs` code-behind files, [wpf.instructions.md](wpf.instructions.md) also applies and its WPF-specific guidance takes precedence for code-behind conventions (control naming, event handler signatures, XAML synchronisation). Both files apply simultaneously; there is no conflict on non-WPF concerns.
+
 ## Core Rules
 
 ### 1. Keep Logic Direct and Readable

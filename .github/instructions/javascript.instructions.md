@@ -15,6 +15,7 @@ task_durations:
 total_duration: "00:15:00"
 ai_log: "ai-logs/2026/05/18/acaf6075-7dde-4cc7-b293-0829934f7cc3/conversation.md"
 source: "calculator.html"
+applyTo: "**/*.{js,mjs,cjs,jsx}"
 ---
 
 # JavaScript Development Instructions

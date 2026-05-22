@@ -168,24 +168,7 @@ Example: `[python, testing, unit-tests, pytest]`
 
 **Requirement**: All prompt files must include AI provenance metadata per [ai-assisted-output.instructions.md](ai-assisted-output.instructions.md#required-provenance-metadata-for-every-ai-assisted-artifact).
 
-For **AI-generated prompt files**, add to front matter (alongside top-level fields):
-
-```yaml
-ai_generated: true
-model: "<provider>/<model-name>@<version>"
-operator: "<github-username>"
-chat_id: "<unique-chat-id>"
-prompt: |
-  Original prompt that generated this file
-started: "<ISO8601-timestamp>"
-ended: "<ISO8601-timestamp>"
-task_durations:
-  - task: "task-name"
-    duration: "HH:MM:SS"
-total_duration: "HH:MM:SS"
-ai_log: "ai-logs/YYYY/MM/DD/<chat-id>/conversation.md"
-source: "<operator-name-or-prompt-path>"
-```
+For **AI-generated prompt files**, add the canonical fields defined in [Standard Metadata Front Matter](ai-assisted-output.instructions.md#standard-metadata-front-matter) to the front matter alongside the top-level prompt fields. Do not duplicate the template here; use the canonical source as the single point of truth.
 
 **Post-Creation Steps** (MANDATORY for all AI-generated prompts):
 
